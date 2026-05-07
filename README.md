@@ -238,7 +238,3 @@ docker compose down -v
 - Implementar paginación
 - Agregar logs estructurados
 - Tests unitarios e integración
-
-## 📄 Licencia
-
-ISC
