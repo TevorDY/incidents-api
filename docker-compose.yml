@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  incidents-api:
+    build: .
+    container_name: incidents-api
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - DB_PATH=/data/incidents.db
+    volumes:
+      - incidents-data:/data
+    restart: unless-stopped
+
+volumes:
+  incidents-data:
