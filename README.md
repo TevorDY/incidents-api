@@ -162,7 +162,7 @@ La tabla `incidents` contiene los siguientes campos:
 | created_at | TEXT | Fecha de creación (ISO 8601) |
 | updated_at | TEXT | Fecha de última actualización |
 
-## 🧪 Ejemplos de uso
+## Ejemplos de uso
 
 ### Registrar un incidente con curl
 
@@ -196,7 +196,7 @@ curl -X PATCH http://localhost:3000/incidents/550e8400-e29b-41d4-a716-4466554400
   -d '{"status": "resolved"}'
    
 
-## 💾 Persistencia de datos
+## Persistencia de datos
 
 Los datos se almacenan en un volumen Docker denominado `incidents-data`. Esto garantiza que los datos persistan incluso si el contenedor se detiene.
 
@@ -205,7 +205,7 @@ Para ver los volúmenes:
 docker volume ls
    
 
-## 🛑 Detener la aplicación
+## Detener la aplicación
 
    bash
 docker compose down
@@ -216,7 +216,7 @@ Para eliminar también los volúmenes (borra los datos):
 docker compose down -v
    
 
-## 📝 Supuestos y limitaciones
+## Supuestos y limitaciones
 
 ### Supuestos
 - La API escucha en `0.0.0.0:3000` dentro del contenedor
@@ -229,7 +229,7 @@ docker compose down -v
 - No hay validación exhaustiva de datos (puede extenderse según necesidades)
 - Los timestamps se almacenan en formato ISO 8601
 
-## 🔄 Posibles mejoras futuras
+## Posibles mejoras futuras
 
 - Agregar autenticación JWT
 - Implementar validación más robusta con Joi o Yup
